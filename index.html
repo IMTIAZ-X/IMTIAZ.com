@@ -82,12 +82,12 @@
         font-size: 25px;
         margin-bottom: 25px;
         text-align: center;
-        color: #FF10F0;
+        color: #00ffe1;
       }
       
       p {
         margin-bottom: 20px;
-        line-height: 1.5;
+        line-height: 1.0;
       }
       
       #typing {
@@ -137,7 +137,7 @@
 <body>
   <div style="text-align:center;"><img src="image.png" alt="Head profile picture" width="180" height="180"></div>
   <div id="profile">
-    <h1>Hi! I'm <br>
+    <h1><div id="colorText">Hi! I'm <br></div>
     <span id="typing"></span><span>_</span></h1>
   </div>
   <script defer>
@@ -177,7 +177,30 @@
     }
 
     type();
+    
   </script>
+  </style>
+
+  <style>
+
+    #colorText {
+        transition: color 1s ease-in-out;
+    }
+    </style>
+
+<script>
+var colors = ["red", "green", "blue", "purple", "orange", "Yellow","Brown","Gray","Silver","Gold","Magenta","Magenta","Maroon","Navy","Olive","Turquoise","Violet","White","Cyan","Teal","Lavender","Aqua","Lime","Fuchsia","Rose","Emerald","Sapphire","Amethyst","Topaz","Ruby"];
+var i = 0;
+
+setInterval(function() {
+    document.getElementById("colorText").style.color = colors[i];
+    i++;
+    if (i >= colors.length) {
+        i = 0;
+    }
+}, 1000);
+
+</script>
   <style>
     .button-container {
         text-align: center;
@@ -257,16 +280,16 @@
     .email-button {
         display: inline-block;
         padding: 10px 80px;
-        background-color: #FF10F0;
+        background-color: #fe8300;
         border-radius: 25px;
-        color: #fff;
+        color: #00feed;
         font-weight: bold;
         text-decoration: none;
-        box-shadow: 0px 0px 15px #FF10F0;
+        box-shadow: 0px 0px 15px #f6fa00;
         transition: box-shadow 0.3s ease-in-out;
     }
     .email-button:hover {
-        box-shadow: 0px 0px 25px #ffa600;
+        box-shadow: 0px 0px 25px #00ff2f;
     }
 </style>
 
@@ -275,7 +298,7 @@
 </div><br>
     <footer>
             <center>
-                    <h3 style="color:red;">IMTIAZ © 2023</h3>
+                    <h3 style="color:rgb(246, 255, 0);">IMTIAZ © 2023</h3>
             </center>
     </footer>
 </body>
