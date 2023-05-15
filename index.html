@@ -39,21 +39,21 @@
 		.star {
 			position: absolute;
 			top: 0;
-			width: 2px;
-			height: 2px;
-			background-color: rgba(255,255,255,0.5);
-			border-radius: 50%;
+			width: 3px;
+			height: 3px;
+			background-color: rgba(4, 255, 0, 0.852);
+			border-radius: 100%;
 			opacity: 0;
-			animation: star 0.5s linear infinite;
+			animation: star 1.0s linear infinite;
 		}
 
 		@keyframes star {
 			from {
-				transform: translate(0, -50px);
+				transform: translate(0, 100px);
 				opacity: 1;
 			}
 			to {
-				transform: translate(0, calc(100vh + 50px));
+				transform: translate(0, calc(100vh + 100px));
 				opacity: 0;
 			}
 		}
@@ -137,7 +137,7 @@
 <body>
   <div style="text-align:center;"><img src="image.png" alt="Head profile picture" width="180" height="180"></div>
   <div id="profile">
-    <h1><div id="colorText">Hi! I'm <br></div>
+    <h1><div id="colorText">Hello! I'm <br></div>
     <span id="typing"></span><span>|</span></h1>
   </div>
   <script defer>
@@ -226,7 +226,7 @@ setInterval(function() {
     <a href="https://www.facebook.com/profile.php?id=100042698237832" target="_blank" class="facebook-button">Facebook</a>
   </div><br>
   <style>
-    .button-container {
+       .button-container {
         text-align: center;
     }
 
@@ -257,49 +257,49 @@ setInterval(function() {
     .github-button {
         display: inline-block;
         padding: 10px 95px;
-        background-color: #171515;
+        background-color: #333;
         border-radius: 25px;
         color: #fff;
         font-weight: bold;
         text-decoration: none;
-        box-shadow: 0px 0px 15px #171515;
+        box-shadow: 0px 0px 15px #ffffff;
         transition: box-shadow 0.3s ease-in-out;
     }
 
     .github-button:hover {
-        box-shadow: 0px 0px 25px #171515;
+        box-shadow: 0px 0px 25px #00c8ff;
+        box-shadow: 0px 0px 50px #e0e0e0;
     }
   </style>
   <div class="button-container">
     <a href="https://github.com/IMTIAZ-X" target="_blank" class="github-button">GitHub</a>
   </div><br>
-  <style>
-    .button-container {
-        text-align: center;
-    }
-    .email-button {
-        display: inline-block;
-        padding: 10px 80px;
-        background-color: #fe8300;
-        border-radius: 25px;
-        color: #00feed;
-        font-weight: bold;
-        text-decoration: none;
-        box-shadow: 0px 0px 15px #f6fa00;
-        transition: box-shadow 0.3s ease-in-out;
-    }
-    .email-button:hover {
-        box-shadow: 0px 0px 25px #00ff2f;
-    }
-</style>
-
-<div class="button-container">
-    <a href="Download-App.html" class="email-button">Download App</a>
-</div><br>
     <footer>
             <center>
-                    <h3 style="color:rgb(246, 255, 0);">IMTIAZ © 2023</h3>
+              <h3><b><big><div id="color">IMTIAZ © 2023</div></big></b></h1>
             </center>
-    </footer>
+
+            <style>
+
+              #color {
+                  color: rgb(0, 0, 0);
+                  transition: color 1.0s ease-in-out;
+              }
+              </style>
+
+            <script>
+var colors = ["red","red", "green", "blue", "Yellow","Brown","indigo","Silver","Gold","orange","violet"];
+var i = 0;
+
+setInterval(function() {
+    document.getElementById("color").style.color = colors[i];
+    i++;
+    if (i >= colors.length) {
+        i = 0;
+    }
+}, 1000);
+
+</script>
+</footer>
 </body>
 </html>
